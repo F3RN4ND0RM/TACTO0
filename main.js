@@ -6,14 +6,14 @@
       targets: '.nav-bar',
       height: ['100vh', '10vh'],
       easing: 'easeInOutCirc',
-      duration: 300, // Shortened the duration for faster animation
+      duration: 1000, // Shortened the duration for faster animation
     });
 
     t2.add({
       targets: '.wide-logo-img' ,
       height: ['100px', '30px'],
       easing: 'easeInOutCirc',
-      duration: 300, 
+      duration: 1000, 
     })
 
     
