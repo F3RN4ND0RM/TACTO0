@@ -6,7 +6,7 @@
       targets: '.nav-bar',
       height: ['100vh', '10vh'],
       easing: 'easeInOutCirc',
-      duration: 1000, // Shortened the duration for faster animation
+      duration: 300, // Shortened the duration for faster animation
     });
 
     t2.add({
