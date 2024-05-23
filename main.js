@@ -1,19 +1,20 @@
     // animacion navbar
     let tl = anime.timeline({ autoplay: false });
-    let t2 = anime.timeline({ autoplay:false })
+    let tl2 = anime.timeline({ autoplay:false })
 
     tl.add({
-      targets: '.nav-bar',
-      height: ['100vh', '10vh'],
-      easing: 'easeInOutCirc',
-      duration: 1000, // Shortened the duration for faster animation
-    });
-
-    t2.add({
-      targets: '.wide-logo-img' ,
-      height: ['100px', '30px'],
-      easing: 'easeInOutCirc',
+      targets: '.nav-bar',    
+      translateY : '-90vh',
+      easing: 'linear',
       duration: 1000, 
+    })
+    
+    tl2.add({
+      targets: '.nav-img',
+      translateY: '45vh',
+      scale :0.2,
+      easing: 'linear',
+      duration: 1000,
     })
 
     
@@ -32,7 +33,7 @@
       
       const cappedScrollPercent = Math.min(scrollPercent, 100);
       tl.seek((cappedScrollPercent / 75) * tl.duration);
-      t2.seek((cappedScrollPercent / 75) * t2.duration);
+      tl2.seek((cappedScrollPercent / 75) * tl2.duration);
     });
 
 
