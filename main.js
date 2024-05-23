@@ -6,7 +6,7 @@
       targets: '.nav-bar',    
       translateY : '-90vh',
       easing: 'linear',
-      duration: 1000, 
+      duration: 2000, 
     })
     
     tl2.add({
@@ -14,7 +14,7 @@
       translateY: '45vh',
       scale :0.2,
       easing: 'linear',
-      duration: 1000,
+      duration: 2000,
     })
 
     
