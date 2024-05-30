@@ -57,7 +57,7 @@
         if (anim.progress >= 30 && anim.progress < 60) {
 
           if (!anim.calledCarousel) {
-            imgs =  document.getElementsByClassName("img-container");     
+            imgs =  document.getElementsByClassName("img-container-item");     
             imgs = Array.from(imgs)
             imgs.forEach(img => {
               img.hidden = true
@@ -67,7 +67,7 @@
           if (!anim.calledCarousel) {     
             anim.calledCarousel = true;    
             imgs.forEach(img => {
-              img.hidden = false
+               img.hidden = false
             })               
             carousel("der")            
             
@@ -109,7 +109,7 @@
         if (anim.progress >= 30 && anim.progress < 60) {
 
           if (!anim.calledCarousel) {
-            imgs =  document.getElementsByClassName("img-container");     
+            imgs =  document.getElementsByClassName("img-container-item");   
             imgs = Array.from(imgs)
             imgs.forEach(img => {
               img.hidden = true
