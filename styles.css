@@ -317,7 +317,7 @@ section{
     }
 
     .shirt-container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     .shirt{
@@ -369,7 +369,7 @@ section{
 
     
     .shirt-container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     .shirt{
