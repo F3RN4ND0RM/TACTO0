@@ -1,3 +1,5 @@
+
+/*generales------------------------------------------------------------*/
 @font-face {
     font-family: 'Thunder';
     src: url('./assets/fonts/Thunder-Black.woff') format('woff2'),
@@ -6,6 +8,9 @@
     font-style: normal;
     font-display: swap;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 
 body{
@@ -24,6 +29,7 @@ background-size: calc(40px/4.667) 40px,40px calc(40px/4.667);
 
 }
 
+/*navbar------------------------------------------------------------*/
 
 .nav-bar{
     width: 100%;
@@ -50,6 +56,7 @@ background-size: calc(40px/4.667) 40px,40px calc(40px/4.667);
 
 }
 
+/*section------------------------------------------------------------*/
 
 section{    
     width: 100%;
@@ -59,6 +66,10 @@ section{
     background-color: white;
     
 }
+
+
+
+/*Carousel------------------------------------------------------------*/
 
 .carousel-container{
     width: 100%;
@@ -71,9 +82,14 @@ section{
     align-items: center;    
 }
 
-.carousel, .info-carousel{
-    width: auto;
-    height: 85vh;
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 2px, transparent 0, transparent 50%);
+    background-size: 74px 74px;
+    background-color: #000000;
 }
 
 .info-carousel{
@@ -83,6 +99,33 @@ section{
     z-index: 990;
     background-color: black;
 }
+
+
+.carousel, .info-carousel{
+    width: auto;
+    height: 85vh;
+}
+
+
+.info-carousel footer{   
+    max-width: 100%;
+    padding: 1em;
+    text-align: center;
+    background-color:  #00D9E5;     
+}
+
+.info-carousel footer span{
+    font-family: 'Thunder';
+    color: rgb(255, 255, 255) !important;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #00D9E5;;
+}
+
+
+.info-carousel header, .info-carousel footer{
+    margin: 1em;
+}
+
 
 
 .info-carousel header h1, .info-carousel footer span{
@@ -97,41 +140,10 @@ section{
     margin: 0;
     letter-spacing: 2px
 }
-.info-carousel header, .info-carousel footer{
-    margin: 1em;
-}
-.info-carousel footer{   
-    max-width: 100%;
-    padding: 1em;
-    text-align: center;
-    
-    background-color:  #00D9E5;  
-}
-.info-carousel footer span{
-    font-family: 'Thunder';
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-}
 
 
-.carousel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 2px, transparent 0, transparent 50%);
-    background-size: 74px 74px;
-    background-color: #000000;
-}
 
-.img-container {
-   width: 100%; 
-   height: 100%;
-   display: flex; 
-   flex-direction: column;
-   align-content: center;
-   justify-content: center;
-}
+
 
 .carousel-buttons{
     display: flex;
@@ -161,6 +173,16 @@ section{
     color: white;
 }
 
+
+.img-container {
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+ }
+
 .img-container img{    
     width: 100%;
     max-width: 100%;
@@ -177,6 +199,79 @@ section{
     display: none;
 }
 
+
+/* Seccion playera  ---------------------------*/
+
+.shirt-container{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+.shirt-container div{
+    width: 100%;
+}
+
+.shirt-wraper{
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirt, .shirt path{
+    max-height: 90vh;
+    max-width: 90%;
+    position: absolute;    
+    stroke-dasharray: 2500;
+    stroke-dashoffset: 2500;
+    animation: dash 4.5s infinite forwards;
+
+}
+
+.shirt-text{
+    color: white;
+    font-size: 2em;
+    font-family: 'Jost', sans-serif;
+    opacity: 0;
+}
+
+
+
+.shirt-info{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 990;
+    background-color:rgb(255, 3, 120)
+}
+
+.shirt-info h1{
+    line-height: 90%;
+    color: white;
+    font-family: 'Thunder';
+    font-size: 100px;
+    font-style: normal;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px
+    
+}
+
+@keyframes dash {
+
+      50%{
+        stroke-dashoffset: 0;
+      }
+     100%{
+        stroke-dashoffset: -2500;
+      }
+  }
+
+
+/* Media Queries---------------------------*/
 @media screen and (max-width: 200px) {
 
     .wide-logo img{
@@ -220,6 +315,18 @@ section{
     .info-carousel header, .info-carousel footer{
         margin: 0;
     }
+
+    .shirt-container{
+        flex-direction: column;
+    }
+    
+    .shirt{
+        max-height:45vh;        
+    }
+
+    .shirt-text{
+        font-size:1rem;
+    }
     
 
 }
@@ -260,6 +367,18 @@ section{
         text-align: center;
     }
 
+    
+    .shirt-container{
+        flex-direction: column;
+    }
+    
+    .shirt{
+        max-height:45vh;        
+    }
+
+    .shirt-text{
+        font-size:1rem;
+    }
     
 }
 
