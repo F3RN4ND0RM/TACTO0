@@ -133,9 +133,9 @@ section{
     line-height: 90%;
     color: white;
     font-family: 'Thunder';
-    font-size: 100px;
+    font-size: 70px;
     font-style: normal;
-    text-align: right;
+    text-align: center;
     padding: 0;
     margin: 0;
     letter-spacing: 2px
@@ -251,7 +251,7 @@ section{
     line-height: 90%;
     color: white;
     font-family: 'Thunder';
-    font-size: 100px;
+    font-size: 70px;
     font-style: normal;
     text-align: center;
     padding: 0;
@@ -317,7 +317,7 @@ section{
     }
 
     .shirt-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
     .shirt{
@@ -369,7 +369,7 @@ section{
 
     
     .shirt-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
     .shirt{
