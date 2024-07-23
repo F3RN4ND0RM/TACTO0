@@ -1,46 +1,41 @@
 
 /*generales------------------------------------------------------------*/
-@font-face {
-    font-family: 'Thunder';
-    src: url('./assets/fonts/Thunder-Black.woff') format('woff2'),
-        url('./assets/fonts/Thunder-Black.woff2') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
+
+  
 body{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: 
-      radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#000000 54% 57%,#0000 59%) 0 calc(40px/2),
-      radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#000000 54% 57%,#0000 59%) calc(40px/2) 0,
-      radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#000000 54% 57%,#0000 59%),
-      radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#000000 54% 57%,#0000 59%),
-      #ffffff;
-background-size: calc(40px/4.667) 40px,40px calc(40px/4.667);
-
+    overflow-x: hidden;
+    background-color: #000;
 }
 
 /*navbar------------------------------------------------------------*/
 
 .nav-bar{
     width: 100%;
-    background-color: black;
+    background-color: #000000;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 0;
     position: sticky;
     z-index: 1000;
+    gap: 2em;
+}
+.nav-bar-footer{
+    color: rgb(255, 255, 255);
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 3rem;
 }
 
 .nav-img{
@@ -58,38 +53,46 @@ background-size: calc(40px/4.667) 40px,40px calc(40px/4.667);
 
 /*section------------------------------------------------------------*/
 
-section{    
+section{
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;  
     display: block;
-    margin-bottom: 10em;
-    background-color: white;
-    
+    margin-bottom: 5em;
 }
-
 
 
 /*Carousel------------------------------------------------------------*/
 
+
+
 .carousel-container{
     width: 100%;
-    max-width: 100%;
-    min-height: 90vh;
-    background:  #000000;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 1em;
-    align-items: center;    
+    min-height: 70vh;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    background-color: #ffffff;
 }
 
 
-.carousel{
+.carousel{    
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 2px, transparent 0, transparent 50%);
-    background-size: 74px 74px;
-    background-color: #000000;
+    height: 60vh;
+    width: 90%;
+}
+
+
+.carousel span{ 
+    position: absolute;
+    text-align: center;   
+    font-family: "Anton", sans-serif;    
+    color: rgb(255, 255, 255) !important;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #00b7ff;;
+    font-size: 15rem;
 }
 
 .info-carousel{
@@ -97,53 +100,26 @@ section{
     flex-direction: column;
     justify-content: center;
     z-index: 990;
-    background-color: black;
+    margin-block: 2em;
+    height: 5vh;
 }
-
-
-.carousel, .info-carousel{
-    width: auto;
-    height: 85vh;
-}
-
-
-.info-carousel footer{   
-    max-width: 100%;
-    padding: 1em;
-    text-align: center;
-    background-color:  #00b0f0;     
-}
-
-.info-carousel footer span{ 
-    font-family: 'Thunder';
-    color: rgb(255, 255, 255) !important;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #00b0f0;;
-}
-
 
 .info-carousel header, .info-carousel footer{
     margin: 1em;
 }
 
-
-
 .info-carousel header h1, .info-carousel footer span{
     width: 100%;
     line-height: 90%;
-    color: white;
-    font-family: 'Thunder';
-    font-size: 70px;
-    font-style: normal;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 0;
     margin: 0;
-    letter-spacing: 2px
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 2rem;
 }
-
-
-
-
 
 .carousel-buttons{
     display: flex;
@@ -153,24 +129,24 @@ section{
     height: 100% !important;
     background: none;
     z-index: 900;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-.carousel-button{
-    color: white;
-    font-size: 2rem;
-}
 
-.carousel-button:hover{
-    scale: 2;
-    color: rgb(225, 225, 225);
+.carousel-button-item:hover{
+    scale: 1.2;
+    -webkit-text-stroke-color:rgb(255, 3, 120)
 }
 
 .carousel-button-item{
     background: none;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 7px;
+    -webkit-text-stroke-color: #7979795e;;
+    font-size: 5rem;
+    paint-order: stroke fill;
 }
 
 
@@ -200,75 +176,47 @@ section{
 }
 
 
-/* Seccion playera  ---------------------------*/
+/* Seccion 3D  ---------------------------*/
 
-.shirt-container{
+.shirt-section{
     display: flex;
+    height: 100vh;
     width: 100%;
-    height: 90vh;
-}
-.shirt-container div{
-    width: 100%;
+    background-color: #ffffff;
 }
 
-.shirt-wraper{
-    position: relative;
-    height: 90vh;
+.shirt-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    max-width:100% !important;
+    height: 100% !important;
+    background: none;
+    z-index: 900;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 1em;
+    padding: 1em;
 }
 
-.shirt, .shirt path{
-    max-height: 90vh;
-    max-width: 90%;
-    position: absolute;    
-    stroke-dasharray: 2500;
-    stroke-dashoffset: 2500;
-    animation: dash 4.5s infinite forwards;
-
+.shirt-button-item{
+    width: 50px;
+    height: 50px;    
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
 }
 
-.shirt-text{
-    color: white;
-    font-size: 2em;
-    font-family: 'Jost', sans-serif;
-    opacity: 0;
+.shirt-button-item:hover{
+    scale: 1.2;
 }
 
 
-
-.shirt-info{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 990;
-    background-color:rgb(255, 3, 120)
+.shirt-button-item.selected{
+    scale: 1.2;
+    background-image: none !important;
+    background-color: rgb(246, 246, 246);
 }
 
-.shirt-info h1{
-    line-height: 90%;
-    color: white;
-    font-family: 'Thunder';
-    font-size: 70px;
-    font-style: normal;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    letter-spacing: 2px
-    
-}
 
-@keyframes dash {
-
-      50%{
-        stroke-dashoffset: 0;
-      }
-     100%{
-        stroke-dashoffset: -2500;
-      }
-  }
 
 
 /* Media Queries---------------------------*/
@@ -333,6 +281,10 @@ section{
 
 
 @media screen and (min-width:200px) and (max-width: 600px) {
+
+    section{
+        border: solid white 5px;
+    }
     .wide-logo img{
         width: auto;
         max-height: 20px;
@@ -341,29 +293,38 @@ section{
     
     .carousel-container{
         max-width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        min-height: 90vh;
-        gap: 0;
+        min-height: 80vh;
     }
 
-    .carousel, .info-carousel{
-        height: auto;
+    .carousel-button{
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .carousel span {
+        font-size: 4em;
+        position: relative;
+    }
+
+    .info-carousel{
+        height: 10vh;
+        margin: 0;
     }
     .carousel{
-        grid-row: inherit;
+        max-height: 70vh;
+        flex-direction: column;
     }
 
-    .img-container{
-        height: 90vh;
+    .img-containe{
+        height: 80%;
     }
-    .img-container img{        
-        height: 80vh;
+
+    .img-container img{      
         object-fit: contain;
     }
 
     .info-carousel header h1, .info-carousel footer span{
-        font-size: 3em;
+        font-size: 1em;
         text-align: center;
     }
 
