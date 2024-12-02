@@ -11,21 +11,22 @@ tl.add({
   targets: '.nav-bar',    
   translateY : '-90vh',
   easing: 'linear',
-  duration: 1000, 
+  duration: 2000, 
 })
 .add({
   targets: '.nav-img',
-  translateY: '54vh',
+  bottom : ['75%','10%'],
+  top : ['25%', '90%'],
   scale :0.2,
   easing: 'linear',
-  duration: 1000,
+  duration: 2000,
 }, 0)
 .add({
   targets: '.nav-bar-footer',
   opacity: 0,
   translateY: '5em',
   easing: 'linear',
-  duration: 100,
+  duration: 1000,
 },0 )
 
 

@@ -1,0 +1,10 @@
+SELECT CONCAT(  [orId]   , ' ' , new.idc) AS campaña, [nombre], [puesto], [municipio], [sexo], [whats], [tel], candids.[email]
+FROM candids
+JOIN (SELECT clientes.idc as idc, ors.id as id
+FROM clientes 
+JOIN ors
+ON ors.clienteId = clientes.id) AS new
+ON new.id = candids.[orId]
+WHERE orId >= '41037'
+ORDER BY orId;
+
