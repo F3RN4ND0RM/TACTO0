@@ -205,7 +205,8 @@ section{
 .info-section{
     top: 0;
     background-color: white;
-    padding: 1em;
+    padding: 0em;
+    margin: 0;
     max-width: 100%;
     display: flex;
 }
@@ -282,7 +283,8 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    padding: 0em;
+    margin: 0;
     text-align: center;
     font-family: "Manrope", sans-serif;
     background-color: #000000;
@@ -315,6 +317,8 @@ section{
     align-items: center;
     text-align: center;
     gap: 2em;
+    margin: 0;
+    padding: 0;
 }
 
 .mapa div{
@@ -376,10 +380,13 @@ iframe{
     position: relative;
     height: 90vh;
     width: 100%;
+    max-width: 100%;
     align-items: flex-end;
     justify-content: center;
+    margin: 0;
+    padding: 0;
     background: rgb(67,70,81);
-background: radial-gradient(circle, rgba(67,70,81,1) 0%, rgba(0,0,0,1) 40%);
+    background: radial-gradient(circle, rgba(67,70,81,1) 0%, rgba(0,0,0,1) 40%);
 }
 
 .shirt-canvas{
@@ -443,4 +450,75 @@ background: radial-gradient(circle, rgba(67,70,81,1) 0%, rgba(0,0,0,1) 40%);
     font-style: normal;
     font-variant: normal;
     text-transform: none;
+}
+
+@media screen and (min-width:200px) and (max-width: 600px) {
+
+    .wide-logo img{
+        width: auto;
+        max-height: 20px;
+    }
+
+    .carousel-container{
+        max-width: 100%;
+        min-height: 80vh;
+    }
+
+    .carousel-button{
+        color: white;
+        font-size: 1rem;
+    }
+    
+    .carousel span {
+        font-size: 4em;
+        position: relative;
+    }
+
+    .info-carousel{
+        height: 10vh;
+        margin: 0;
+    }
+    .carousel{
+        max-height: 70vh;
+        flex-direction: column;
+    }
+
+    .img-containe{
+        height: 80%;
+    }
+
+    .img-container img{      
+        object-fit: contain;
+    }
+
+    .info-carousel header h1, .info-carousel footer span{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    
+    .shirt-container{
+        flex-direction: column;
+    }
+    
+    .shirt{
+        max-height:45vh;        
+    }
+
+
+    .shirt-text{
+        font-size:1rem;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
 }

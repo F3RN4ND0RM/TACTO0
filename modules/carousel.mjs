@@ -1,5 +1,4 @@
-
-import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs';
 
 // animacion navbar
 let tl = anime.timeline({ autoplay: false });

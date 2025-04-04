@@ -25,9 +25,9 @@ const backgrounds = [
 
 //array de texturas
 const textures = [
-	'../assets/textures/t1.jpg',
-	'../assets/textures/t2.jpg',
-	'../assets/textures/t3.jpg',
+	'./assets/textures/t1.jpg',
+	'./assets/textures/t2.jpg',
+	'./assets/textures/t3.jpg',
 ]
 
 //array de los detalles de la camisa
@@ -122,7 +122,7 @@ window.addEventListener( 'resize', function () {
 //Cargamos el modelo
 loader.load(
 	// resource URL
-	'../assets/3d/shirt.json',
+	'./assets/3d/shirt.json',
 
 	// onLoad callback
 	// Here the loaded data is assumed to be an object
