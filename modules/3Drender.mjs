@@ -63,7 +63,7 @@ camera.rotation.set(-10.80,0,0)
 controls.target.set(0,5,0)
 controls.enablePan= false
 controls.enableZoom= false
-controls.enableRotate = false
+controls.enableRotate = true
 controls.autoRotate = true
 controls.autoRotateSpeed = 3
 controls.dampingFactor = true

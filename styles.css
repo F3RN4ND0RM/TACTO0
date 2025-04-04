@@ -372,8 +372,7 @@ iframe{
 
 /* Seccion 3D  ---------------------------*/
 
-.shirt-section{
-    display: none;
+.shirt-section{    
     position: relative;
     height: 90vh;
     width: 100%;
